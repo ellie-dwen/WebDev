@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+</head>
+
+<body>
+	<h1>Pizza Guys Order Form</h1>
+	<img src="http://troppa-nl.com/wp-content/uploads/2015/08/pizza-stock.jpg" width="400px" title="pizza"><br>
+	
+	<form id="order" method="" action="#">
+		<p>Name<br> <input type="text" name="name" required></p>
+		<p>Address: #### Street Name<br> <input type="text" name="Address" required></p>
+		<p>Phone Number: 123-456-7890<br> <input type="text" name="phone" pattern="^\d{3}-\d{3}-\d{4}$" required></p>
+		<p>Pizza Size<br> 
+			<input type="radio" name="size" value="Small" required> Small
+			<input type="radio" name="size" value="Medium"> Medium
+			<input type="radio" name="size" value="Large"> Large
+		</p>
+		<p>Pizza Toppings<br>
+			<input type="checkbox" name="toppings" value="Sausage">Sausage
+			<input type="checkbox" name="toppings" value="Pepperoni">Pepperoni
+			<input type="checkbox" name="toppings" value="Onion">Onion
+			<input type="checkbox" name="toppings" value="Mushroom">Mushroom
+		</p>
+		<button type="submit">Place Order</button>
+		<button type="reset">Clear</button>
+	</form>
+</body>
+</html>
