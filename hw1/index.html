@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Dingqiao Wen, dw20" />
+	<script>
+		function validateForm() {
+    		if(validatePassword() && validateAge()) {
+    			var epochTime = new Date().valueOf();
+    			document.getElementById("epochTime").value = epochTime;
+    			return true;
+    		}
+    		return false;
+    	}
+    	function validatePassword() {
+    		var password = document.forms["registration"]["password"].value;
+    		var confirmation = document.forms["registration"]["confirmation"].value;
+    		if (password != confirmation) {
+    			alert("Password does not match");
+    			return false;
+    		}
+    		return true;
+    	}
+    	function validateAge() {
+    		var today = new Date();
+    		var birthDate = new Date(document.forms["registration"]["birth"].value);
+    		var age = today.getFullYear() - birthDate.getFullYear();
+    		var month = today.getMonth() - birthDate.getMonth();
+    		if (month < 0 || (month == 0 && today.getDate() < birthDate.getDate())) {
+    			age--;
+    		}
+    		if (age < 18) {
+    			alert("Younger than 18, cannot register");
+    			return false;
+    		}
+    		return true;
+    	}
+	</script>
+</head>
+
+<body>
+	<h1>Registration</h1>
+	<form id="registration" method="get" action="formProcessor.html" onsubmit="return validateForm()">
+		<p>account name <br/><input type="text" name="account" 
+            pattern="[A-Za-z][A-Za-z0-9]*" required /></p>
+		<p>display name <br/><input type="text" name="display" /></p>
+		<p>email address <br/><input type="email" name="email" required /></p>
+		<p>phone number: 123-456-7890 <br/><input type="text" name="phone" 
+            pattern="^\d{3}-\d{3}-\d{4}$" required /></p>
+		<p>date of birth: MM/DD/YYYY <br/><input type="text" name="birth" 
+            pattern="(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d" required /></p>
+		<p>zipcode <br/><input type="text" name="zipcode" pattern="^\d{5}$" required /></p>
+		<p>password <br/><input type="password" name="password" required /></p>
+		<p>password confirmation <br/><input type="password" name="confirmation" required /></p>
+		<input type="hidden" name="timestamp" id="epochTime" />
+		<input type="submit" value="submit" />
+        <input type="reset" value="clear" />
+	</form>
+</body>
+</html> 
