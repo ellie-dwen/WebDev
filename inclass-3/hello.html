@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8" />
+    <meta name="author" content="Dingqiao Wen, dw20" />
+    <title>Hello</title>
+    <script>
+    function clearComments() {
+    	document.getElementById("comment").value = "";
+    }
+
+    function startTimer() {
+    	stopTimer();
+    	interval = setInterval(function() {
+    		document.getElementById("indicator").innerHTML = --sec;
+    		if(sec == 0) {
+    			stopTimer();
+    			window.location = "http://www.clear.rice.edu/comp431/sample/hello.html";
+    		}
+    	}, 1000);
+    }
+
+    function stopTimer() {
+    	clearInterval(interval);
+    }
+
+    var sec = 15;
+    var interval;
+    startTimer();
+    setTimeout(function(){ 
+    	alert("the page will redirect when the counter reaches zero"); 
+    }, 5000);
+    </script>
+</head>
+
+<body>
+	<h1>Hello from Dingqiao Wen (Ellie)</h1>
+	<img src="prisma.png" width="200px" title="prisma"><br>
+	<p>I'm Ellie, a fourth year PhD student at Rice University.</p>
+
+	<div>
+		<span id="indicator">15</span><br/>
+		<button onclick="stopTimer()">pause</button>
+		<button onclick="startTimer()">resume</button>
+	</div>
+	
+	<h2>More about me</h2>
+	<p>Find me on 
+		<a href="https://www.instagram.com/elliewdq/">Instagram</a>, 
+		<a href="https://www.facebook.com/ellie.d.wen">Facebook</a>,
+		<a href="https://www.linkedin.com/in/dingqiao-wen-ellie-3767751a">LinkedIn</a>
+	</p>
+
+	<h2>Comments</h2>
+	<form id="myForm">
+		<textarea rows="4" cols="50" name="comment" id="comment">Leave a comment here...</textarea>
+		<p>Name
+			<input type="text" value="name" />
+			<input type="submit" value="submit" />
+			<button onclick="clearComments()">clear</button>
+		</p>
+	</form>
+</body>
+</html>
