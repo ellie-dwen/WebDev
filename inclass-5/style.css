@@ -1,0 +1,23 @@
+div {
+	background-color: lightgreen;
+	border-style: solid;
+    border-width: 5px;
+    border-color: red; 
+    color: blue;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+input[type="button"] {
+    background-color: darkred;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
