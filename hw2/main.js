@@ -37,13 +37,14 @@ var STOP = "Stop";
 // image files
 var IMAGE_ARRAY = ["rice.jpg","pizza.jpg","prisma.jpg"];
 
-// onload function will load cards that contain images and start cycling the images
+// load cards that contain images and start cycling the images
 window.onload = function() {
 	// cache elements
 	var elements = document.getElementsByTagName("img");
 	var imageCyclers = [];
-	for (var i = 0; i < elements.length; i++) {
-		imageCyclers.push(new ImageCycler(i));
-		imageCyclers[i].start();
-	}
+	Array.prototype.forEach.call(elements, function(_, index) {
+		var cycle = new ImageCycler(index);
+		cycle.start();
+		imageCyclers.push(cycle);
+	});
 };
