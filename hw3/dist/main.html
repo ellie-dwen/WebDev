@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Dingqiao Wen, dw20" />
+    <title>Ricebook Main</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="main.js"></script>
+</head>
+
+<body>
+<div class="div1">
+    <div class="col-sm-3">
+        <h3 class="heading2">
+            <a href="index.html">Log Out</a>
+            <span style="display:inline-block; width: 20px;"></span>
+            <a href="profile.html">Profile</a>
+        </h3>
+        <div class="div4">
+            <div>
+                <img src="http://minions2015.com/wp-content/uploads/2015/10/5.minion-banana-love-2015-film-wallpaper.jpg"
+                     class="img-responsive img-rounded" />
+                <p><span id="status"></span></p>
+                <b>Stuart Minion</b>
+            </div>
+            <div>
+                <textarea id="newStatus" class="form-control custom-control" rows="1"
+                          style="resize:none" placeholder="What's new?"></textarea>
+                <span id="updateBtn" class="btn btn-primary btn-block">Update Status</span>
+            </div>
+        </div>
+        <div class="div4" style="margin-top:10px;">
+            <div>
+                <img src="http://vignette1.wikia.nocookie.net/despicableme/images/b/b0/Minion_kevin_in_despicable_me_2-1920x1200.jpg"
+                     class="img-responsive img-rounded" />
+                <p>Uh... la cucaracha?</p>
+                <b>Kevin Minion </b><span class="btn btn-default unfollow">Unfollow</span>
+            </div>
+            <div>
+                <img src="https://s-media-cache-ak0.pinimg.com/736x/54/35/af/5435af9c7edba4dc31d363520cafaf6c.jpg"
+                     class="img-responsive img-rounded" />
+                <p>King Bob!</p>
+                <b>Bob Minion </b><span class="btn unfollow">Unfollow</span>
+            </div>
+            <div>
+                <img src="http://www.designbolts.com/wp-content/uploads/2013/07/despicable-me-2-stuart-Girl-Minion.jpg"
+                     class="img-responsive img-rounded" />
+                <p>Whhhaaaaa?</p>
+                <b>Jerry Minion </b><span class="btn unfollow">Unfollow</span>
+            </div>
+            <div>
+                <textarea id="friendName" class="form-control custom-control" rows="1"
+                          style="resize:none" placeholder="Name of the friend" ></textarea>
+                <span id="addFriend" class="btn btn-primary btn-block">Add Friend</span>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-9">
+        <div>
+            <div class="col-sm-6">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                    <textarea name="message" cols="40" rows="5" id="postArea"
+                              class="form-control message" placeholder="Share on your timeline!"></textarea>
+                    </div>
+                    <div class="panel-footer">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label class="btn btn-default btn-lg">
+                                    Add a photo
+                                    <input type="file" id="photoButton" style="display: none;" />
+                                </label>
+                            </div>
+                            <div class="col-md-3">
+                                <button type="reset" id="clear" class="btn btn-lg btn-primary btn-block">Clear</button>
+                            </div>
+                            <div class="col-md-3">
+                                <button type="submit" id="post" class="btn btn-lg btn-primary btn-block">Post</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-5">
+                <h1 class="heading1">RiceBook</h1>
+                <ul class="list-group">
+                    <li>Connect with friends</li>
+                    <li>Share on your timeline</li>
+                </ul>
+                <form class="navbar-form navbar-left" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control btn-lg" placeholder="Search Post">
+                        <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="posts-grid">
+                <h4><mark>Kevin</mark> at <mark>Terrible Winter City</mark></h4>
+                <h5>1 hr ago</h5>
+                <p class="post-text">
+                    <img src="http://s2.dmcdn.net/L0H59.jpg" class="img-responsive img-thumbnail img-rounded" />
+                    This place is awful! </p>
+                <div class="col-md-5">
+                    <button type="edit" class="btn btn-default">Edit</button>
+                </div>
+                <div class="col-md-7">
+                    <button type="comment" class="btn btn-default">Comment</button>
+                </div>
+            </div>
+            <div class="posts-grid">
+                <h4><mark>Jerry</mark> at <mark>Oh-my-god Palace</mark></h4>
+                <h5>2 hrs ago</h5>
+                <p class="post-text">
+                    <img src="https://s3-sa-east-1.amazonaws.com/assets.abc.com.py/2015/07/06/los-minions-kevin-stuart-y-bob-_970_524_1251374.jpg"
+                         class="img-responsive img-thumbnail img-rounded" />Our band rocks!</p>
+                <div class="col-md-5">
+                    <button type="edit" class="btn btn-default">Edit</button>
+                </div>
+                <div class="col-md-7">
+                    <button type="comment" class="btn btn-default">Comment</button>
+                </div>
+            </div>
+            <div class="posts-grid">
+                <h4><mark>Jerry</mark> - writing a song at <mark>Music Garden</mark></h4>
+                <h5>2 days ago</h5>
+                <p class="post-text">
+                    ba-ba-ba-ba-ba-nana<br />
+                    banana-ah-ah<br />
+                    potato-na-ah-ah<br />
+                    togari noh pocato li kani malo mani kano chi ka-ba-ba<br />
+                    ba-ba-nanaaaaah!</p>
+                <div class="col-md-5">
+                    <button type="edit" class="btn btn-default">Edit</button>
+                </div>
+                <div class="col-md-7">
+                    <button type="comment" class="btn btn-default">Comment</button>
+                </div>
+            </div>
+            <div class="posts-grid">
+                <h4><mark>Bob</mark> - floating at <mark>Pacific Ocean</mark></h4>
+                <h5>10 days ago</h5>
+                <p class="post-text">
+                    <img src="https://s3-sa-east-1.amazonaws.com/assets.abc.com.py/2015/07/06/los-minions-han-estado-buscando-villanos-para-servir-desde_970_524_1251370.jpg"
+                         class="img-responsive img-thumbnail img-rounded" /><br />
+                    New world!</p>
+                <div class="col-md-5">
+                    <button type="edit" class="btn btn-default">Edit</button>
+                </div>
+                <div class="col-md-7">
+                    <button type="comment" class="btn btn-default">Comment</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="posts-grid">
+                <h4><mark>Stuart</mark> with <mark>Kevin</mark> and <mark>Bob</mark> at <mark>Gru's Factory</mark></h4>
+                <h5>3 hrs ago</h5>
+                <p class="post-text">
+                    <img src="http://datamarca.com/wp-content/uploads/2015/07/CINE.jpg"
+                         class="img-responsive img-thumbnail img-rounded" />Happy Birthday Gru!</p>
+                <div class="col-md-5">
+                    <button type="edit" class="btn btn-default">Edit</button>
+                </div>
+                <div class="col-md-7">
+                    <button type="comment" class="btn btn-default">Comment</button>
+                </div>
+            </div>
+            <div class="posts-grid">
+                <h4><mark>Bob</mark> - writing a poetry at <mark>Poetry Museum</mark></h4>
+                <h5>3 hrs ago</h5>
+                <p class="post-text">
+                    togari noh pocato-li kani<br />
+                    malo mani kano chi ka-baba<br />
+                    ba-ba-nana<br />
+                    yoh plano boo la<br />
+                    planonoh too ma bana-na<br />
+                    la-ka moobi talamoo<br />
+                </p>
+                <div class="col-md-5">
+                    <button type="edit" class="btn btn-default">Edit</button>
+                </div>
+                <div class="col-md-7">
+                    <button type="comment" class="btn btn-default">Comment</button>
+                </div>
+            </div>
+            <div class="posts-grid">
+                <h4><mark>Bob</mark> in <mark>Honolulu, Hawaii</mark></h4>
+                <h5>5 days ago</h5>
+                <p class="post-text">
+                    <img src="https://i.ytimg.com/vi/QBWxQh7AhFM/maxresdefault.jpg"
+                         class="img-responsive img-thumbnail img-rounded" />Hhhaaawwwaaaiii!</p>
+                <div class="col-md-5">
+                    <button type="edit" class="btn btn-default">Edit</button>
+                </div>
+                <div class="col-md-7">
+                    <button type="comment" class="btn btn-default">Comment</button>
+                </div>
+            </div>
+            <div class="posts-grid">
+                <h4><mark>Stuart</mark> - learning French at <mark>Language Institute</mark></h4>
+                <h5>1 day ago</h5>
+                <p class="post-text">sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <div class="col-md-5">
+                    <button type="edit" class="btn btn-default">Edit</button>
+                </div>
+                <div class="col-md-7">
+                    <button type="comment" class="btn btn-default">Comment</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

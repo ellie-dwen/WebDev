@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Dingqiao Wen, dw20" />
+    <title>Ricebook Profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="profile.js"></script>
+</head>
+
+<body>
+<div class="div1">
+    <div class="col-sm-6">
+        <h3 class="heading2"><a href="main.html">Main Page</a></h3>
+        <div class="div2">
+            <img src="http://minions2015.com/wp-content/uploads/2015/10/5.minion-banana-love-2015-film-wallpaper.jpg"
+                 class="img-responsive img-thumbnail img-rounded" /><br />
+            <label class="btn btn-lg btn-primary btn-block">
+                Update profile picture
+                <input type="file" id="profileButton" style="display: none;" />
+            </label>
+        </div>
+        <div class="div2">
+            <h2 class="heading2">Current Info</h2>
+            <div class="div3">
+                <p>Name: <span id="pName"></span></p>
+                <p>Email: <span id="pEmail"></span></p>
+                <p>Phone: <span id="pPhone"></span></p>
+                <p>Date of Birth: 01/01/2008</p>
+                <p>Zipcode: <span id="pZipcode"></span></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <h1 class="heading1">RiceBook</h1>
+        <div class="div2">
+            <h2 class="heading2">Update Info</h2>
+            <label for="name" class="sr-only">Name</label>
+            <input type="text" id="name" class="div-input" name="name" placeholder="Name"/>
+            <label for="email" class="sr-only">Email</label>
+            <input type="text" id="email" class="div-input" name="email" placeholder="Email"/>
+            <label for="phone" class="sr-only">Phone</label>
+            <input type="text" id="phone" class="div-input" name="phone" placeholder="Phone"/>
+            <label for="zipcode" class="sr-only">Zipcode</label>
+            <input type="text" id="zipcode" class="div-input" name="zipcode" placeholder="Zipcode"/>
+            <label for="password" class="sr-only">Password</label>
+            <input type="text" id="password" class="div-input" name="password" placeholder="Password"/>
+            <input type="button" id="submit" class="btn btn-lg btn-primary btn-block" value="Submit" />
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

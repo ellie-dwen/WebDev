@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Dingqiao Wen, dw20" />
+    <title>Ricebook Landing</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="index.js"></script>
+</head>
+
+<body>
+<div class="div1">
+    <div class="col-sm-6">
+        <h1 class="heading1">Welcome to RiceBook!</h1>
+        <ul>
+            <li>Connect with the world around you.</li>
+            <li>Checkout the latest posts from your friends.</li>
+            <li>Share the memorable moments in your life.</li>
+        </ul>
+        <div class="div2">
+            <label for="inputEmail" class="sr-only">Email address</label>
+            <input type="email" id="inputEmail" class="div-input" placeholder="Email address">
+            <label for="inputPassword" class="sr-only">Password</label>
+            <input type="password" id="inputPassword" class="div-input" placeholder="Password">
+            <input type="button" id="login" class="btn btn-lg btn-primary btn-block" value="Sign in" />
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <form class="div2" id="registration" method="get" action="main.html" onsubmit="return validateForm()">
+            <h2 class="heading2">Registration</h2>
+            <label for="newAccount" class="sr-only">New Account</label>
+            <input type="text" id="newAccount" class="div-input" name="account" placeholder="Account ID" pattern="[A-Za-z][A-Za-z0-9]*" required />
+            <label for="displayName" class="sr-only">Display Name</label>
+            <input type="text" id="displayName" class="div-input" name="display" placeholder="Display Name" />
+            <label for="emailAddress" class="sr-only">Email Address</label>
+            <input type="email" id="emailAddress" class="div-input" name="email" placeholder="Email Address" required />
+            <label for="phoneNumber" class="sr-only">New Account</label>
+            <input type="text" id="phoneNumber" class="div-input" name="phone" placeholder="Phone Number: XXX-XXX-XXXX"
+                   pattern="^\d{3}-\d{3}-\d{4}$" required />
+            <label for="birthDate" class="sr-only">New Account</label>
+            <input type="text" id="birthDate" class="div-input" name="birth" placeholder="Date of Birth: MM/DD/YYYY"
+                   pattern="(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d" required />
+            <label for="zipcode" class="sr-only">New Account</label>
+            <input type="text" id="zipcode" class="div-input" name="zipcode" placeholder="Zipcode" pattern="^\d{5}$" required />
+            <label for="password" class="sr-only">New Account</label>
+            <input type="password" id="password" class="div-input" name="password" placeholder="Password" required />
+            <label for="passwordConfirmation" class="sr-only">New Account</label>
+            <input type="password" id="passwordConfirmation" class="div-input" name="confirmation" placeholder="Password Confirmation" required />
+            <input type="submit" class="btn btn-lg btn-primary btn-block" value="Register" />
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
